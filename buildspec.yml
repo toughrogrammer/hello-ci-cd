@@ -10,9 +10,11 @@ phases:
       - apt-get update -y
       - apt-get install -y build-essential python-pip git
       - pip install docker-compose
+      - pip install -r requirements.txt
   build:
     commands:
       - echo hello build!
+      - pytest tests
   post_build:
     commands:
       - echo hello post_build!
