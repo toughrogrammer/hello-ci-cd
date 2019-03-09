@@ -15,6 +15,7 @@ phases:
     commands:
       - echo hello build!
       - pytest tests
+      - docker
   post_build:
     commands:
       - echo hello post_build!
