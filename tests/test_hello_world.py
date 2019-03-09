@@ -7,6 +7,3 @@ class TestHelloWorld(unittest.TestCase):
         o = HelloWorld()
         self.assertFalse(o.greet() == 'hello world!')
         self.assertTrue(o.greet() == 'hello, world!')
-
-    def test_it_will_fail(self):
-        self.assertTrue(1 == 2)
