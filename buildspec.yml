@@ -4,16 +4,10 @@ phases:
   pre_build:
     commands:
       - echo hello pre_build!
-      - apt-get update -y
-      - apt-get install -y software-properties-common 
-      - add-apt-repository ppa:git-core/ppa -y
-      - apt-get update -y
-      - apt-get install -y build-essential python-pip git
-      - pip install docker-compose
-      - pip install -r requirements.txt
       - docker build -t hello-ci-cd .
   build:
     commands:
+      - docker-compose
       - docker run hello-ci-cd
   post_build:
     commands:
